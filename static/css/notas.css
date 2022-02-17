@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4B543B;
+}
+body{
+    background-color: #729EA1;
+
+}
+input{
+    background-color: #B4D2BA;
+    color: #B57F50;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    
+}
+p{
+    font-size: 1.5rem;
+}
+button{
+    font-size: 1rem;
+    border: none;
+    background-color: #B4D2BA;
+}
+button:hover{
+    color: white;
+    background-color: #B57F50;
+    cursor: pointer;
+    
+}
+.notas{
+    background-color: #D9D7D3;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.nota{
+    background-color: #F4F3EE;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 40px;
+    
+}
+.nota p{
+    
+    color: #E0AFA0;
+}
+.nota button{
+    font-size: 1rem;
+    border: none;
+    background-color: #8A817C;
+    margin: 2px;
+    color: #F4F3EE;
+}
+.nota button:hover{
+    color: white;
+    background-color: #B57F50;
+    cursor: pointer;
+    
+}
+.nota b{
+    /* color: red; */
+    font-size: .7rem;
+}
+.nombre{
+    font-size: .8rem;
+}
+.nota h3{
+    margin-bottom: 5px;
+}
+.formu{
+   
+}

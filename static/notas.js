@@ -12,9 +12,9 @@ function main(){
             doc.innerHTML+=`
             <div class="nota">
                 <h3>${nota.titulo}</h3>
-                <p>User: ${nota.name}</p>
+                <b class="nombre">${nota.name}</b>
                 <p>${nota.nota}</p>
-                <p>${nota.expiracion}</p>
+                <b>${nota.expiracion}</b>
                 <button onClick="deleteNota(${nota.idNotas})">Delete</button>
             </div>
             `

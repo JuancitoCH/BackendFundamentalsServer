@@ -9,14 +9,15 @@
     <title>index</title>
 </head>
 <body>
-    <p>Seleccione usuario</p>
+    <a href="http://localhost:4000/notas">Todas las notas</a>
+    <p>Seleccione un usuario</p>
     <select name="" id="selectUsuarios">
 
     </select>
     <!-- <input type="text"> -->
     <button onclick="ir()">Ir</button>
 
-    <form onsubmit="registrarUsuario(event)">
+    <form onsubmit="registrarUsuario(event)" class="form">
         <p>Nombre</p>
         <input type="text" name="name">
         <p>Email:</p>
