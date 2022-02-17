@@ -9,6 +9,19 @@ class Users {
             return {err}
         }
     }
+    async insertUser(data){
+        if(data.name && data.password && data.email){
+
+            try{
+                return await insert("users",data)
+            }
+            catch(err){
+                return {err}
+            }
+        }
+        return({Message:"Faltan Campos a Completar"})
+    }
+
 }
 
 module.exports=Users

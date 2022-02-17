@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/notas.js"></script>
+    <title>Notas</title>
+</head>
+<body>
+    <form onsubmit="crearNotas(event)">
+        <p>nota</p> 
+        <p>id:</p>
+        <input type="text" name="id">
+        <p>Titulo:</p>
+        <input type="text" name="titulo">
+        <p>Fecha:</p>
+        <input type="date" name="date">
+        <input type="text"name="nota" id="nota"></input>
+        <button id="btnCrearNota">Crear</button>
+    </form>
+        <div id="rootNotas"></div>
+</body>
+</html>
