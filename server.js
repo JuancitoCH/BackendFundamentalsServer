@@ -12,7 +12,7 @@ app.use("/notas",notasRutas)
 app.use("/users",usersRutas)
 
 app.use(express.static(path.join(__dirname,"static")))
-// console.log(path.join(__dirname,"static"))
+
 
 function archivosHtml(doc){
     return path.join(__dirname,"views",doc)
@@ -20,9 +20,8 @@ function archivosHtml(doc){
 
 
 app.get('/',(req,res)=>{
-    
-    // console.log(`${req.method} ${req.url} ${res.statusCode}`  )
-    return res.sendFile(archivosHtml("notas.html"))
+
+    return res.sendFile(archivosHtml("index.html"))
     
 })
 

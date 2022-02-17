@@ -2,9 +2,11 @@
 window.onload = main
 
 function main(){
+    // console.log(window.location.pathname)
+    const id = obtenerIdUser()
     const doc = document.getElementById("rootNotas")
     doc.innerHTML=""
-    fetch("http://localhost:4000/notas/all")
+    fetch("http://localhost:4000/notas/"+id)
     .then(data=>data.json())
     .then(notas=>{
         console.log(notas)
@@ -32,14 +34,19 @@ const deleteNota=(idNotas)=>{
     .then(main())
 }
 
-
+const obtenerIdUser=()=>{
+    const idUser = window.location.pathname.split("x")[1]
+    console.log(idUser)
+    return idUser
+}
 
 const crearNotas =(e)=>{
     const doc = document.getElementById("rootNotas")
     e.preventDefault()
-    const {id,date,nota,titulo} = e.target
+    const id = obtenerIdUser()
+    const {date,nota,titulo} = e.target
     console.log(date.value)
-    if(!(id.value && date.value && nota.value && titulo.value)) return alert("Debe Completar todos los campos")
+    if(!( date.value && nota.value && titulo.value)) return alert("Debe Completar todos los campos")
 
     fetch("http://localhost:4000/notas/crear",{
         headers:{
@@ -47,7 +54,7 @@ const crearNotas =(e)=>{
         },
         method:"POST",
         body:JSON.stringify({
-            idUser:id.value,
+            idUser:id,
             expiracion:date.value ,
             nota:nota.value,
             titulo:titulo.value

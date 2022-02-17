@@ -31,7 +31,7 @@ const insert = async (tableName,data)=>{
 }
 const del = async(tableName,id)=>{
     try{
-        await query(`DELETE FROM ${tableName} WHERE id=?`,[id])
+        await query(`DELETE FROM ${tableName} WHERE idNotas=?`,[id])
         return data
     }catch(error){
         return error
